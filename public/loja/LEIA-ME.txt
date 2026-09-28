@@ -1,0 +1,25 @@
+Imagens desta loja. Para outro pet shop, troque os arquivos mantendo os nomes.
+
+  logo-1000.webp, logo-480.webp, logo-220.webp
+      Logotipo com FUNDO TRANSPARENTE, nas larguras 1000, 480 e 220 px.
+
+  hero/hero-desktop-2560.webp, hero-desktop-1600.webp, hero-desktop-1024.webp
+      Arte do topo para computador (16:9). O logotipo fica do lado direito;
+      o lado esquerdo precisa ser "paisagem" (o cartão de texto fica ali).
+
+  hero/hero-mobile-1290.webp, hero-mobile-780.webp
+      Arte do topo para celular (9:16). Logotipo na metade de cima;
+      a metade de baixo fica atrás do cartão de texto.
+
+  fotos/cachorro-*.webp, gato-*.webp, passaro-*.webp
+      Fotos da seção "Aqui tem de tudo" (4:3), em 1400 e 760 px.
+
+  fotos/brinquedos-*.webp, tutor-cachorro-*.webp, tutora-gato-*.webp
+      Mural "Pet feliz é pet que brinca" (4:3), em 1400 e 760 px.
+
+  fotos/loja-1100.webp, loja-600.webp
+      Foto real da loja (polaroide ao lado do mapa).
+
+  marcas/<nome>.webp
+      Logos das marcas com fundo transparente. A lista (nome, arquivo e tamanho de exibição)
+      fica em MARCAS, dentro de src/loja.ts.
