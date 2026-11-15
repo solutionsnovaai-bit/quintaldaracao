@@ -21,7 +21,7 @@ export default function Rodape() {
       </nav>
       <div className="rodape-col">
         <b>Visite</b>
-        <address><a href={linkRota} target="_blank" rel="noopener noreferrer">{e.rua}<br />{e.bairro} ({e.regiao})<br />{e.cidade} - {e.uf} · {e.cep}</a></address>
+        <address><a href={linkRota} target="_blank" rel="noopener noreferrer">{e.rua}<br />{e.bairro} ({e.regiao})<br />{e.cidade} - {e.uf}{e.cep && ` · ${e.cep}`}</a></address>
         <p>{LOJA.horario.texto}{LOJA.horario.diasTexto ? `, ${LOJA.horario.diasTexto}` : ''}</p>
       </div>
       <div className="rodape-col">

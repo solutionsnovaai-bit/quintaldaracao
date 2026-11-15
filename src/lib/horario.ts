@@ -21,6 +21,7 @@ function agoraSP() {
 export type Status = { aberto: boolean; curto: string; longo: string; fechaLogo: boolean }
 
 export function calcularStatus(): Status {
+  if (!LOJA.horario.confirmado) return { aberto: false, fechaLogo: false, curto: 'Agende pelo WhatsApp', longo: '' }
   const { dia, min } = agoraSP()
   const fecha = horaCurta(LOJA.horario.fecha), abre = horaCurta(LOJA.horario.abre)
   if (DIAS.has(dia) && min >= ABRE && min < FECHA) {

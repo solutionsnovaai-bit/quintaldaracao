@@ -58,7 +58,7 @@ export default function Abertura({ onAbrir, onFim }: { onAbrir: () => void; onFi
     <div className="abertura-centro" aria-hidden="true">
       <div className="abertura-marca">
         <span className="abertura-raios" />
-        <img className="abertura-logo" src="/loja/logo-1000.webp" srcSet="/loja/logo-480.webp 480w, /loja/logo-1000.webp 1000w" sizes="(max-width: 600px) 78vw, 460px" width={1000} height={747} alt="" decoding="async" fetchPriority="high" />
+        <img className="abertura-logo" src="/loja/logo-1000.webp" srcSet="/loja/logo-480.webp 480w, /loja/logo-1000.webp 1000w" sizes="(max-width: 600px) 78vw, 460px" width={1000} height={1000} alt="" decoding="async" fetchPriority="high" />
       </div>
       <div className="abertura-patas">{[0, 1, 2, 3, 4].map(i => <Pata key={i} className={`p${i}`} />)}</div>
       <p className="abertura-texto">{ABERTURA.texto}</p>

@@ -52,7 +52,7 @@ export default function Header({ menuAberto, setMenuAberto }: { menuAberto: bool
           {NAV.map(n => <a key={n.id} href={`#${n.id}`} className={ativo === n.id ? 'is-ativo' : undefined} aria-current={ativo === n.id ? 'true' : undefined}>{n.nome}</a>)}
         </nav>
         <div className="topo-acoes">
-          <a className="botao botao-whats botao-pequeno topo-pedir" href={waLink()} target="_blank" rel="noopener noreferrer"><BrandIcon brand="whatsapp" /><span>Pedir no WhatsApp</span></a>
+          <a className="botao botao-whats botao-pequeno topo-pedir" href={waLink()} target="_blank" rel="noopener noreferrer"><BrandIcon brand="whatsapp" /><span>Agendar no WhatsApp</span></a>
           <button ref={botao} className="topo-menu" type="button" aria-expanded={menuAberto} aria-controls="menu-movel" aria-label={menuAberto ? 'Fechar menu' : 'Abrir menu'} onClick={() => setMenuAberto(!menuAberto)}>
             {menuAberto ? <X size={22} strokeWidth={2.4} /> : <span className="topo-menu-linhas" aria-hidden="true"><i /><i /><i /></span>}
           </button>
@@ -68,7 +68,7 @@ export default function Header({ menuAberto, setMenuAberto }: { menuAberto: bool
         </ul>
         <motion.div className="menu-movel-pe" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3, ease: EASE }}>
           <StatusLoja />
-          <a className="botao botao-whats" href={waLink()} target="_blank" rel="noopener noreferrer"><BrandIcon brand="whatsapp" /><span>Pedir no WhatsApp</span></a>
+          <a className="botao botao-whats" href={waLink()} target="_blank" rel="noopener noreferrer"><BrandIcon brand="whatsapp" /><span>Agendar no WhatsApp</span></a>
           <a className="link" href={linkRota} target="_blank" rel="noopener noreferrer"><MapPin size={16} strokeWidth={2.2} aria-hidden="true" />{LOJA.endereco.rua}, {LOJA.endereco.bairro}</a>
         </motion.div>
       </motion.nav>}

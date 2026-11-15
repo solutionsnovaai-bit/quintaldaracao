@@ -459,3 +459,69 @@ button { font: inherit; color: inherit; cursor: pointer; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
 .movimento-pausado *, .movimento-pausado *::before, .movimento-pausado *::after { animation-play-state: paused !important; }
+
+/* Identidade 4 Patas Club — o logo em relevo é reservado à interface;
+   o acabamento em veludo aparece somente nas duas artes do hero. */
+:root { --madeira-veio: none; }
+.status.is-consulta i { background: #61e0dc; animation: none; box-shadow: none; }
+.botao-sol { background: var(--acento-escuro); color: white; --cor-degrau: #4A0B51; }
+.botao-claro { --cor-degrau: #D8CBDD; box-shadow: inset 0 0 0 2px #E9DEED, 0 var(--degrau) 0 var(--cor-degrau); }
+.porta { background: repeating-linear-gradient(90deg, #ffffff08 0 2px, transparent 2px 60px), linear-gradient(135deg, #861F91, #45064C); }
+.abertura-luz { background: radial-gradient(ellipse, #D8FFFAAA, transparent 70%); }
+.abertura-raios { opacity: .4; }
+.chamada-cartao { background: #691172; }
+.rodape { color: #FAEDF9; }
+.marca-rodape { max-width: 176px; height: auto; }
+.hero-club { padding-top: 96px; background: #290023; overflow: hidden; }
+.hero-club .hero-arte { overflow: visible; }
+.hero-club .hero-imagem { transform: none; }
+.hero-club .hero-imagem img { display: block; width: 100%; height: auto; object-fit: contain; }
+.hero-club .hero-conteudo { position: absolute; inset: 96px 0 0; display: flex; align-items: center; pointer-events: none; }
+.hero-club .hero-cartao { width: 45%; max-width: 570px; padding: 0 0 32px; background: none; border-radius: 0; box-shadow: none; pointer-events: auto; }
+.hero-club h1 { color: #fff; font-size: clamp(2.4rem, 4.5vw, 4.65rem); line-height: 1.06; }
+.hero-club .hero-palavra { color: #6CE0D7; }
+.hero-club .hero-texto { color: #EEDDEB; max-width: 44ch; font-size: clamp(.95rem, 1.35vw, 1.16rem); }
+.hero-club .hero-selo { background: #ffffff15; color: #C8FBF3; border: 1px solid #ffffff22; }
+.hero-club .hero-selo .pata { color: #63D9D4; }
+.hero-club .hero-infos { color: #D7C2D4; border-color: #ffffff25; font-size: .85rem; gap: 16px; }
+.hero-club .hero-acoes { gap: 14px; }
+.hero-club .hero-acoes .botao { min-height: 50px; font-size: .9rem; }
+.servicos-grade { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.servico-card { padding: 34px; border: 1px solid #E9DCEE; border-radius: 28px; background: white; display: flex; flex-direction: column; align-items: flex-start; }
+.servico-icone { color: var(--acento-escuro); margin-bottom: 22px; }
+.servico-card:nth-child(2) { background: #E9F8F6; border-color: #CCEAE6; }
+.servico-card h3 { font: 600 1.7rem/1.12 var(--display); }
+.servico-card p { margin: 16px 0 24px; color: var(--tinta-2); }
+.servico-card a { display: inline-flex; gap: 8px; align-items: center; color: var(--acento-escuro); font-weight: 900; margin-top: auto; text-decoration: underline; text-underline-offset: 5px; }
+.galeria { background: #F0E9F4; }
+.galeria-cabeca { display: flex; justify-content: space-between; gap: 30px; align-items: flex-end; margin-bottom: 36px; }
+.galeria-controles { display: flex; gap: 10px; }
+.galeria-controles button { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: white; color: var(--acento-escuro); border: 1px solid #DCC9E3; }
+.galeria-controles button:disabled { opacity: .35; cursor: default; }
+.galeria-trilho { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #A565AA transparent; padding: 4px 0 18px; }
+.galeria-foto { margin: 0; flex: 0 0 220px; scroll-snap-align: start; }
+.galeria-foto img { width: 220px; height: 276px; object-fit: cover; border-radius: 22px; background: #DCD1DE; }
+.galeria-instagram { margin-top: 24px; flex-wrap: wrap; }
+.onde-visual { padding-bottom: 0; align-self: center; }
+@media (min-width: 761px) and (max-width: 1080px) {
+  .hero-club .hero-cartao { width: 49%; padding-bottom: 16px; }
+  .hero-club h1 { font-size: clamp(2.1rem, 4.2vw, 3rem); }
+  .hero-club .hero-texto { line-height: 1.5; margin-top: 12px; }
+  .hero-club .hero-acoes { margin-top: 18px; }
+  .hero-club .hero-infos { display: none; }
+  .hero-club .hero-acoes .botao { min-height: 44px; font-size: .78rem; padding-inline: 12px; }
+}
+@media (max-width: 760px) {
+  .hero-club { padding-top: 84px; }
+  .hero-club .hero-conteudo { position: relative; inset: auto; display: block; margin-top: -78vw; padding-bottom: 62px; }
+  .hero-club .hero-cartao { width: 100%; max-width: 570px; margin-inline: auto; padding: 0; }
+  .hero-club h1 { font-size: clamp(2.45rem, 9.2vw, 4.2rem); max-width: 14ch; }
+  .hero-club .hero-texto { font-size: 1rem; max-width: 42ch; }
+  .hero-club .hero-infos { font-size: .8rem; gap: 12px; }
+  .hero-club .hero-acoes .botao { min-height: 52px; font-size: .95rem; }
+  .servicos-grade { grid-template-columns: 1fr; }
+  .servico-card { padding: 28px; }
+  .galeria-cabeca { align-items: flex-start; flex-direction: column; gap: 22px; }
+  .galeria-foto { flex-basis: 210px; }
+  .galeria-foto img { width: 210px; height: 265px; }
+}

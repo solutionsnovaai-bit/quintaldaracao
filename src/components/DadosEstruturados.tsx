@@ -1,4 +1,4 @@
-import { LOJA, MARCAS, SEO } from '../loja'
+import { LOJA, SEO } from '../loja'
 import { temWhatsApp } from '../lib/whatsapp'
 
 const DIAS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -15,9 +15,8 @@ export default function DadosEstruturados() {
     image: `${__SITE_ORIGIN__}/og.jpg`,
     logo: `${__SITE_ORIGIN__}/loja/logo-480.webp`,
     address: { '@type': 'PostalAddress', streetAddress: e.rua, addressLocality: e.cidade, addressRegion: e.uf, postalCode: e.cep, addressCountry: 'BR' },
-    openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: LOJA.horario.dias.map(d => DIAS[d]), opens: LOJA.horario.abre, closes: LOJA.horario.fecha }],
-    brand: MARCAS.map(m => ({ '@type': 'Brand', name: m.nome })),
   }
+  if (LOJA.horario.confirmado) dados.openingHoursSpecification = [{ '@type': 'OpeningHoursSpecification', dayOfWeek: LOJA.horario.dias.map(d => DIAS[d]), opens: LOJA.horario.abre, closes: LOJA.horario.fecha }]
   if (temWhatsApp) dados.telephone = `+${LOJA.whatsapp.replace(/\D/g, '')}`
   if (LOJA.instagram) dados.sameAs = [LOJA.instagram]
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dados) }} />

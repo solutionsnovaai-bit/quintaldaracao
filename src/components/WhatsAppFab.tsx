@@ -54,7 +54,7 @@ export default function WhatsAppFab({ liberado }: { liberado: boolean }) {
   if (!liberado) return null
   return <div className="whats-fab">
     <span className={`whats-dica ${dica ? 'is-visivel' : ''}`} aria-hidden="true">Pedir pelo WhatsApp</span>
-    <a ref={ref} className="whats-botao" href={waLink()} target="_blank" rel="noopener noreferrer" aria-label={`Pedir no ${LOJA.nome} pelo WhatsApp (abre em nova aba)`} onMouseEnter={() => setDica(true)} onMouseLeave={() => setDica(false)} onFocus={() => setDica(true)} onBlur={() => setDica(false)}>
+    <a ref={ref} className="whats-botao" href={waLink()} target="_blank" rel="noopener noreferrer" aria-label={`Falar com ${LOJA.nome} pelo WhatsApp (abre em nova aba)`} onMouseEnter={() => setDica(true)} onMouseLeave={() => setDica(false)} onFocus={() => setDica(true)} onBlur={() => setDica(false)}>
       <span className="whats-onda" aria-hidden="true" />
       <BrandIcon brand="whatsapp" />
     </a>
