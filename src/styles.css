@@ -526,11 +526,20 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 @media (min-width: 561px) { :root { --topo-h: 94px; } }
 
-.carrossel-pets { max-width: 980px; margin: 0 auto 22px; }
-.carrossel-pets-acoes { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 12px; }
-.carrossel-pets-acoes button { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--principal); border-radius: 50%; background: var(--papel); color: var(--principal-escuro); cursor: pointer; }
-.carrossel-pets-acoes button:hover { background: var(--principal-claro); }
-.carrossel-pets-acoes svg { width: 18px; height: 18px; }
-.carrossel-pets-trilho { position: relative; display: flex; gap: 14px; align-items: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; list-style: none; margin: 0; padding: 4px 0 12px; scrollbar-width: thin; }
-.carrossel-pets-trilho > li { flex: 0 0 clamp(145px, 42vw, 180px); scroll-snap-align: start; }
-.carrossel-pets-trilho img { display: block; width: 100%; height: auto; border-radius: 18px; }
+.carrossel-pets { max-width: 980px; margin: 0 auto 22px; overflow: hidden; }
+.carrossel-pets-trilho { display: flex; width: max-content; animation: correr-fotos 13s linear infinite; }
+.carrossel-pets-grupo { display: flex; align-items: flex-start; gap: 14px; list-style: none; margin: 0; padding: 4px 14px 12px 0; }
+.carrossel-pets-grupo > li { flex: 0 0 clamp(145px, 42vw, 180px); width: clamp(145px, 42vw, 180px); }
+.carrossel-pets-grupo img { display: block; width: 100%; height: auto; border-radius: 18px; }
+.carrossel-pets.is-estatico { overflow-x: auto; }
+.carrossel-pets.is-estatico .carrossel-pets-trilho { animation: none; }
+
+@keyframes correr-fotos {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrossel-pets { overflow-x: auto; }
+  .carrossel-pets-trilho { animation: none; }
+  .carrossel-pets-copia { display: none; }
+}
