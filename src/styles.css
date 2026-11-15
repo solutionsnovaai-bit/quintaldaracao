@@ -525,3 +525,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .galeria-foto { flex-basis: 210px; }
   .galeria-foto img { width: 210px; height: 265px; }
 }
+
+/* Marca horizontal com espaço para os controles em celulares. */
+.topo-marca { flex: 0 1 220px; min-width: 0; }
+.marca-topo { width: 220px; max-width: 100%; height: auto; object-fit: contain; }
+.topo-acoes { margin-left: auto; flex-shrink: 0; }
+@media (max-width: 560px) { .topo-barra { gap: 10px; } .topo-marca { flex-basis: 180px; } .marca-topo { width: 180px; height: auto; } }

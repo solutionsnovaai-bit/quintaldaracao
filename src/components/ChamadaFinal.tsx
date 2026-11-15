@@ -10,7 +10,7 @@ export default function ChamadaFinal() {
     <Reveal className="wrap" y={40}>
       <div className="chamada-cartao">
         <svg className="chamada-traves" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 3H97V97H3Z M3 3L97 97 M97 3L3 97" /></svg>
-        <img className="chamada-logo" src="/loja/logo-480.webp" srcSet="/loja/logo-480.webp 480w, /loja/logo-1000.webp 1000w" sizes="(max-width: 900px) 60vw, 340px" width={480} height={480} alt="" loading="lazy" decoding="async" />
+        <img className="chamada-logo" src="/4patas/logo-480.webp" srcSet="/4patas/logo-480.webp 480w, /4patas/logo-1000.webp 1000w" sizes="(max-width: 900px) 60vw, 340px" width={480} height={480} alt="" loading="lazy" decoding="async" />
         <div className="chamada-texto">
           <h2><span>{CHAMADA.titulo}</span> <em>{CHAMADA.destaque}</em></h2>
           <p>{CHAMADA.texto}</p>

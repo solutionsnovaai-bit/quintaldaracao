@@ -11,7 +11,7 @@ import { ENDERECO_COMPLETO, LOJA, SEO } from './src/loja'
 function siteOrigin(mode: string) {
   const env = loadEnv(mode, '.', 'VITE_')
   const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  const raw = env.VITE_SITE_URL || (vercel ? `https://${vercel}` : 'https://quintaldaracao.vercel.app')
+  const raw = env.VITE_SITE_URL || (vercel ? `https://${vercel}` : 'http://localhost:4173')
   const url = new URL(raw)
   if (!['https:', 'http:'].includes(url.protocol)) throw new Error('VITE_SITE_URL deve usar HTTP ou HTTPS.')
   return url.origin
@@ -35,7 +35,7 @@ function dadosDaLoja(origin: string): Plugin {
   }
   const manifesto = JSON.stringify({
     name: `${LOJA.nome} · Pet shop`, short_name: LOJA.nome,
-    icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }],
+    icons: [{ src: '/4patas-icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/4patas-icon-512.png', sizes: '512x512', type: 'image/png' }],
     theme_color: SEO.corTema, background_color: SEO.corFundo, display: 'standalone',
   }, null, 2)
   return {

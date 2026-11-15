@@ -19,8 +19,8 @@ export default function Hero({ pronto }: { pronto: boolean }) {
   return <section id="inicio" className="hero hero-club">
     <div className="hero-arte">
       <picture className="hero-imagem">
-        <source media="(max-width: 760px)" srcSet="/loja/hero/hero-mobile-480.webp 480w, /loja/hero/hero-mobile-941.webp 941w" sizes="100vw" />
-        <img src="/loja/hero/hero-desktop-1672.webp" srcSet="/loja/hero/hero-desktop-1024.webp 1024w, /loja/hero/hero-desktop-1672.webp 1672w" sizes="100vw" width={1672} height={941} alt="4 Patas Club: logo de cachorro e gato em veludo roxo e turquesa, com toalha e bolinha" fetchPriority="high" decoding="async" />
+        <source media="(max-width: 760px)" srcSet="/4patas/hero/hero-mobile-480.webp 480w, /4patas/hero/hero-mobile-941.webp 941w" sizes="100vw" />
+        <img src="/4patas/hero/hero-desktop-1672.webp" srcSet="/4patas/hero/hero-desktop-1024.webp 1024w, /4patas/hero/hero-desktop-1672.webp 1672w" sizes="100vw" width={1672} height={941} alt="4 Patas Club: logo de cachorro e gato em veludo roxo e turquesa, com toalha e bolinha" fetchPriority="high" decoding="async" />
       </picture>
     </div>
     <div className="hero-conteudo wrap">

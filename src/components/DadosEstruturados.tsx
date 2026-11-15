@@ -12,8 +12,8 @@ export default function DadosEstruturados() {
     name: LOJA.nome,
     description: SEO.descricao,
     url: `${__SITE_ORIGIN__}/`,
-    image: `${__SITE_ORIGIN__}/og.jpg`,
-    logo: `${__SITE_ORIGIN__}/loja/logo-480.webp`,
+    image: `${__SITE_ORIGIN__}/4patas-og.jpg`,
+    logo: `${__SITE_ORIGIN__}/4patas/logo-480.webp`,
     address: { '@type': 'PostalAddress', streetAddress: e.rua, addressLocality: e.cidade, addressRegion: e.uf, postalCode: e.cep, addressCountry: 'BR' },
   }
   if (LOJA.horario.confirmado) dados.openingHoursSpecification = [{ '@type': 'OpeningHoursSpecification', dayOfWeek: LOJA.horario.dias.map(d => DIAS[d]), opens: LOJA.horario.abre, closes: LOJA.horario.fecha }]
